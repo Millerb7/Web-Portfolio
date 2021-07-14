@@ -4,6 +4,12 @@
     border-radius: 0;
 }
 
+/*
+    Titles - font-family: 'Raleway', sans-serif;
+    Content - font-family: 'Poppins', sans-serif;
+    Other - font-family: 'Noto Sans JP', sans-serif;
+*/
+
 :root {
     --primary: #cf86ec;
     --secondary: rgb(128, 39, 187);
@@ -14,11 +20,13 @@
 body{ 
     background-color: var(--primary);
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav {
     color: var(--complementary);
     background-color: var(--dark);
+    font-family: 'Raleway', sans-serif;
 }
 
 .nav-item i {
@@ -38,12 +46,18 @@ nav {
     min-width: 100%;
 }
 
-#subtitle {
+#about-me {
     top: 20%;
     right: 0;
     width: 50%;
     text-align: center;
     color: var(--complementary);
+}
+
+#about-me h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 90px;
+    font-weight: 800;
 }
 
 .navButton {
@@ -57,9 +71,19 @@ nav {
     color: var(--dark);
 }
 
+#work-modal .modal-content {
+    background-color: var(--complementary);
+    color: var(--dark);
+}
+
+#work-modal .modal-body{
+    background-color: var(--dark);
+    color: var(--complementary);
+}
+
 .workItem {
-    background-color: var(--primary);
-    border: 2px solid var(--dark);
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
     list-style: none;
     color: var(--complementary);
     text-decoration: none;
@@ -67,6 +91,31 @@ nav {
 
 .workItem:hover {
     text-decoration: none;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: var(--complementary);
+}
+
+#highlights {
+    background-color: var(--dark);
+}
+
+#highlightsTitle {
+    color:var(--primary);
+}
+
+#highlightedWork {
+    background-color: var(--primary);
+    flex: 0 0 80%;
+}
+
+#highlightNavbar {
+    background-color: var(--complementary);
+    border-left: 5px solid var(--dark);
+    flex: 0 0 20%;
+}
+
+.highlightBtn {
+    width: 100%;
+    color:var(--dark);
+    font-size: 25px;
 }
