@@ -22,13 +22,17 @@ function createPagesList (event) {
 
             for(var i = 0; i < data.length; i++) {
                 var listItem = document.createElement('a');
-                listItem.classList = 'workItem col-5 p-5 m-2 text-center';
+                listItem.classList = 'workItem col-sm-12 col-lg-5 p-5 m-2 text-center';
                 listItem.setAttribute('href','https://millerb7.github.io/' + data[i].name + '/');
                 listItem.setAttribute('target','_blank');
                 
                 var itemName = document.createElement('h5');
                 itemName.textContent = data[i].name;
                 listItem.append(itemName);
+
+                var itemDescription = document.createElement('p');
+                itemDescription.textContent = data[i].description;
+                listItem.append(itemDescription);
         
                 workList.append(listItem);
             }
@@ -53,7 +57,7 @@ function createRepoList (event) {
 
             for(var i = 0; i < data.length; i++) {
                 var listItem = document.createElement('a');
-                listItem.classList = 'workItem col-5 p-5 m-2 text-center';
+                listItem.classList = 'workItem col-sm-12 col-lg-5 p-5 m-2 text-center';
                 listItem.setAttribute('href',data[i].html_url);
                 listItem.setAttribute('target','_blank');
 
